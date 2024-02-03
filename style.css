@@ -111,19 +111,96 @@ label input:checked ~ label span ion-icon{
     width: 348px;
     height: 408px;
     pointer-events: none;
-    background: url(bulb_off.png);
+    background: url(bulboff.jpg);
     transition: 0.5s;
 }
 
 label input:checked ~ .bulb{
-    background: url(2.png);
+    background: url(bulb_on.jpg);
 }
 
 label input:checked ~ .status {
     content: "Lights On?";
 }
 
-/* Responsive adjustments */
+.wrapper span{
+    position: fixed;
+    color: #333;
+    text-shadow: 0 0 25px aliceblue,
+                0 0 50px green,
+                0 0 100px green,
+                0 0 150px aliceblue;
+    animation: animate 3s linear infinite;
+    font-size: 100px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: -1;
+    bottom: -120px;
+}
+
+.wrapper span:nth-child(1){
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2){
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(3){
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4){
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(5){
+    left: 40%;
+    animation-delay: 5s;
+}
+
+.wrapper span:nth-child(6){
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7){
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.wrapper span:nth-child(8){
+    left: 80%;
+    animation-delay: 9s;
+}
+
+.wrapper span:nth-child(9){
+    left: 90%;
+    animation-delay: 10s;
+}
+
+.wrapper span:nth-child(10){
+    left: 100%;
+    animation-delay: 11s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     h2, .status {
         font-size: 2em;
@@ -143,8 +220,7 @@ label input:checked ~ .status {
 
     .bulb {
         position: fixed;
-		width: 348px;
-    height: 408px;
-		
+        width: 348px;
+        height: 408px;
     }
 }
